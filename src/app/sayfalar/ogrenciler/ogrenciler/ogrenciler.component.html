@@ -1,0 +1,39 @@
+<div class = 'container'>
+  <div class = 'header'>
+          <h3>Treatment</h3>
+          <table class="table table-hover">
+      
+              <tr>
+                  <th scope='col'>#</th>
+                  <th scope='col'>Adı</th>
+                  <th scope='col'>Soyadı</th>
+                  <th scope='col'>Cinsiyet</th>
+                  <th scope='col'>Email</th>
+                  <th scope='col'>Fakülte</th>
+                  <th scope='col'>Bölüm</th>
+                  <th scope="col">Mezuniyet Tarihi</th>
+                  <th scope='col'>İş Durumu</th>
+                  <th scope='col'>Çalıştğı Şirket</th>
+                  <th scope='col'></th>
+              </tr>
+      
+              <tbody>
+                  <tr *ngFor='let ogrenci of ogrenci; let i = index'>
+                      <th>{{i + 1}}</th>
+                      <td>{{ogrenci.ogrAd}}</td>
+                      <td>{{ogrenci.ogrSoyad}}</td>
+                      <td>{{ogrenci.cinsiyet}}</td>
+                      <td>{{ogrenci.email}}</td>
+                      <td>{{ogrenci.ogrFakulte}}</td>
+                      <td>{{ogrenci.ogrBolum}}</td>
+                      <td>{{ogrenci.ogrMeztarihi}}</td>
+                      <td>{{ogrenci.ogrIsdurumu}}</td>
+                      <td>{{ogrenci.ogrSirket}}</td>
+                  </tr>
+      
+              </tbody>
+          </table>
+          <br>
+  </div>   
+  
+</div>

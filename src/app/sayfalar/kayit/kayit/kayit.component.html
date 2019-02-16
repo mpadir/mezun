@@ -1,0 +1,149 @@
+<div class = 'container'>
+    <div class="row">
+      <div class="col-md-5"></div>  
+      <div class="col-md-4">
+            <div class = 'header'>
+                    <h3>Kayıt</h3>
+            </div>
+      </div>  
+
+    </div>   
+        <form #newKayitForm = 'ngForm' (onSubmit) = 'kayitOgr(newKayitForm.value)'>
+          <div class = 'row'>
+           <div class = 'form-group col-md-4'></div>
+            <div class = 'form-group col-md-4'>
+              <label for = 'inputOgrTc'>TC *</label>
+                <input class = 'form-control' id = 'inputOgrTc' type = "number" maxlength="11" name = 'ogrTc' ngModel placeholder = 'tc' required>
+            </div>
+            <div class = 'form-group col-md-2'></div>
+          </div>
+          <div class = 'row'>
+                <div class = 'form-group col-md-4'></div>
+                 <div class = 'form-group col-md-4'>
+                   <label for = 'inputOgrAd'>Adınız *</label>
+                     <input  id = 'inputOgrAd' name = 'ogrAd' ngModel placeholder = 'Adınız' class = 'form-control' type = "text" pattern="[a-zA-Z ]*" required>
+                 </div>
+                 <div class = 'form-group col-md-2'></div>
+               </div>
+               <div class = 'row'>
+                    <div class = 'form-group col-md-4'></div>
+                     <div class = 'form-group col-md-4'>
+                       <label for = 'inputOgrSoyad'>Soyadınız *</label>
+                         <input class = 'form-control' id = 'inputOgrSoyad' type = 'text' name = 'ogrSoyad' ngModel placeholder = 'Soyadınız' required>
+                     </div>
+                     <div class = 'form-group col-md-2'></div>
+                   </div>
+                   <div class = 'row'>
+                    <div class = 'form-group col-md-4'></div>
+                     <div class = 'form-group col-md-4'>
+                       <label for = 'inputCinsiyet'>Cinsiyet *</label>
+                         <select class = 'form-control' id = 'inputCinsiyet' type = 'text' name = "gender" ngModel placeholder = 'cinsiyet' required>
+                           <option>Kadın</option>
+                           <option>Erkek</option>
+                           </select>
+                     </div>
+                     <div class = 'form-group col-md-2'></div>
+                   </div>
+                 
+                                <div class = 'row'>
+                                        <div class = 'form-group col-md-4'></div>
+                                         <div class = 'form-group col-md-4'>
+                                           <label for = 'inputYas'>Doğum Tarihiniz *</label>
+                                             <input class = 'form-control' id = 'inputYas' type = "date" name = 'yas' ngModel placeholder = 'Doğum Tarihiniz' required>
+                                         </div>
+                                         <div class = 'form-group col-md-2'></div>
+                                       </div>
+                                       <div class = 'row'>
+                                        <div class = 'form-group col-md-4'></div>
+                                         <div class = 'form-group col-md-4'>
+                                           <label for = 'inputOgrTel'>Telefon Numaranız *</label>
+                                             <input class = 'form-control' id = 'inputOgrTel' type = "tel" maxlength="11" maxlength="11" name = 'OgrTel' ngModel placeholder = 'Telefon' required>
+                                         </div>
+                                         <div class = 'form-group col-md-2'></div>
+                                       </div>
+                                       <div class = 'row'>
+                                            <div class = 'form-group col-md-4'></div>
+                                             <div class = 'form-group col-md-4'>
+                                               <label for = 'inputEmail'>Email *</label>
+                                                 <input class = 'form-control' id = 'inputEmail' type = "email"  name = 'email' ngModel placeholder = 'email' required>
+                                             </div>
+                                             <div class = 'form-group col-md-2'></div>
+                                           </div>
+                                           <div class = 'row'>
+                                                <div class = 'form-group col-md-4'></div>
+                                                 <div class = 'form-group col-md-4'>
+                                                   <label for = 'inputPassword'>Şifre *</label>
+                                                     <input class = 'form-control' id = 'inputPassword' type = 'text' name = 'password' ngModel placeholder = 'şifre' required>
+                                                 </div>
+                                                 <div class = 'form-group col-md-2'></div>
+                                               </div>
+                                               <div class = 'row'>
+                                                    <div class = 'form-group col-md-4'></div>
+                                                     <div class = 'form-group col-md-4'>
+                                                            <label for = 'inputOgrFakulte'>Fakülte *</label>
+                                                            <select id = 'inputogrFakulte' name = 'ogrFakulte' class = 'form-control' ngModel required>
+                                                              <option>Fen Fakültesi</option>
+                                                                <option>Mühendislik Fakültesi</option>
+                                                                <option>Teknoloji Fakültesi</option>
+                                                                <option>Eğitim Fakültesi</option>
+                                                                <option>Tıp Fakültesi</option>
+                                                            </select>
+                                                            </div>
+                                                            </div>
+                                                            <div class = 'row'>
+                                                                    <div class = 'form-group col-md-4'></div>
+                                                                     <div class = 'form-group col-md-4'>
+                                                                            <label for = 'inputOgrBolum'>Bölüm *</label>
+                                                                            <select id = 'inputOgrBolum' name = 'ogrBolum' class = 'form-control' ngModel required>
+                                                                              <option>Matematik</option>
+                                                                                <option>Bilgisayar Mühendisliği</option>
+                                                                                <option>Yazılım Mühendisliği</option>
+                                                                                <option>Bilgisayar ve Öğretim Teknolojileri</option>
+                                                                                <option>Tıp</option>
+                                                                            </select>
+                                                                            </div>
+                                                                            </div>
+                                                                            <div class = 'row'>
+                                                                              <div class = 'form-group col-md-4'></div>
+                                                                               <div class = 'form-group col-md-4'>
+                                                                                 <label for = 'inputOgrMeztarihi'>Mezuniyet Tarihi *</label>
+                                                                                   <input class = 'form-control' id = 'inputOgrMeztarihi' type = "date" name = 'ogrMeztarihi' ngModel placeholder = 'Mezuniyet Tarihi' required>
+                                                                               </div>
+                                                                               <div class = 'form-group col-md-2'></div>
+                                                                             </div>
+                                                                            <div class = 'row'>
+                                                                                    <div class = 'form-group col-md-4'></div>
+                                                                                     <div class = 'form-group col-md-4'>
+                                                                                            <label for = 'inputOgrIsdurumu'>İş Durumu *</label>
+                                                                                            <select id = 'inputOgrIsdurumu' name = 'ogrIsdurumu' class = 'form-control' ngModel required>
+                                                                                              <option>Çalışıyor</option>
+                                                                                                <option>Çalışmıyor</option>
+                                                                                            </select>
+                                                                                            </div>
+                                                                                            </div>
+                                                                                            <div class = 'row'>
+                                                                                                    <div class = 'form-group col-md-4'></div>
+                                                                                                     <div class = 'form-group col-md-4'>
+                                                                                                       <label for = 'inputOgrSirket'>Çalıştığınız Şirket *</label>
+                                                                                                         <input class = 'form-control' id = 'inputOgrSirket' type = 'text' name = 'ogrSirket' ngModel placeholder = 'Şirket' required>
+                                                                                                     </div>
+                                                                                                     <div class = 'form-group col-md-2'></div>
+                                                                                                   </div>
+                                                                                                   <div class="row">
+                                                                                                      <div class = 'form-group col-md-4'></div>
+                                                                                                      <div class = 'form-group col-md-4'>
+                                                                                                    <div class="modal-footer">
+                                                                                                      <button type="button" class="btn btn-primary"  (click) = 'saveKayit(newKayitForm.value)' data-dismiss="modal">Save changes</button>
+                                                                                                    </div>
+                                                                                                   </div>
+                                                                                                   
+                                               
+                                
+                                
+                                
+
+                            
+                               
+                       
+                         
+        
